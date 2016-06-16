@@ -1,5 +1,5 @@
 # Geographical-Analysis-of-RSS-Data
-A side project done in the summer - it is able to read and analyze data from a live RSS feed (Rich Site Summary - an online source of frequently updated data). The analysis on earthquakes and life expectancy around the globe is used as examples here but in fact the code works with any other geotagged data, which is visualized on a GUI in Java - PApplet. 
+A side project done in the summer - it is able to read and analyze data from a live RSS feed (Rich Site Summary - an online source of frequently updated data). The analysis on earthquakes and life expectancy around the globe is used as examples here but in fact the code works with any other geographically tagged data, which is then visualized on a GUI in Java - PApplet. 
 
 This project:
 
@@ -7,12 +7,12 @@ This project:
 
 2. Uses different sorting algorithms to sort the QuakeEntry based on depth, magnitude, title, distance from any location etc. 
 
-3. Marks the global map based on the magnitude of earthquakes (live data) / life expectancy (provided by World Bank) around the globe.
+3. Marks the global map based on the magnitude of earthquakes (live data) / life expectancy (CSV file provided by the World Bank) around the globe.
 
+Here are the examples demo:
 
+![alt tag](https://github.com/frankcchen/Geographical-Analysis-of-RSS-Data/blob/master/life%20expectancy.png)
 
-P.S.
+![alt tag](https://github.com/frankcchen/Geographical-Analysis-of-RSS-Data/blob/master/earthquakes.png)
 
-1) Live earthquake data is obtained from the website http://earthquake.usgs.gov/. 
-
-2) The 'Location' class is adopted from an Andriod Open Source Project licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0.
+P.S. Live earthquake data is obtained from the website http://earthquake.usgs.gov/. 
