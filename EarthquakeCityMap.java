@@ -1,4 +1,3 @@
-package module3;
 
 //Java utilities libraries
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ import parsing.ParseFeed;
  * */
 public class EarthquakeCityMap extends PApplet {
 
-	// You can ignore this.  It's to keep eclipse from generating a warning.
+	// to keep eclipse from generating a warning.
 	private static final long serialVersionUID = 1L;
 	
 	// Less than this threshold is a light earthquake
@@ -47,7 +46,6 @@ public class EarthquakeCityMap extends PApplet {
 	//feed with magnitude 2.5+ Earthquakes
 	private String earthquakesURL = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom";
     
-	// Here is an example of how to use Processing's color method to generate 
     // an int that represents the color yellow.  
     private int yellow = color(255, 255, 0);
     private int red = color(255, 0, 0);
@@ -56,8 +54,6 @@ public class EarthquakeCityMap extends PApplet {
 	public void setup() {
 		size(950, 600, OPENGL);
 		map = new UnfoldingMap(this, 200, 50, 700, 500, new Google.GoogleMapProvider());
-			// IF YOU WANT TO TEST WITH A LOCAL FILE, uncomment the next line
-			//earthquakesURL = "2.5_week.atom";
 		
 	    map.zoomToLevel(2);
 	    MapUtils.createDefaultEventDispatcher(this, map);	
@@ -85,10 +81,10 @@ public class EarthquakeCityMap extends PApplet {
 	    	float mag = Float.parseFloat(f.getProperty("magnitude").toString());
 	    	// Set the color and size of the marker based on the magnitude of
 	    	// its corresponding earthquake.
-	    	if (mag < 4.0) {
+	    	if (mag < THRESHOLD_LIGHT) {
 	    		marker.setColor(blue);
 	    		marker.setRadius(5);
-	    	}else if (4.0 <= mag && mag < 4.9){
+	    	}else if (THRESHOLD_LIGHT <= mag && mag < THRESHOLD_MODERATE){
 	    		marker.setColor(yellow);
 	    		marker.setRadius(10);
 	    	}else{
