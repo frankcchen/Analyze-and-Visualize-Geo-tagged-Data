@@ -1,4 +1,3 @@
-package demos;
 
 import processing.core.PApplet;
 import de.fhpotsdam.unfolding.UnfoldingMap;
